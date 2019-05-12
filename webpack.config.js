@@ -2,9 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-
 module.exports = {
-    entry: './src/main.ts',
+    entry: {
+        main: './src/main.ts',
+    },
     mode: 'development',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -41,10 +42,12 @@ module.exports = {
                 ]
             },
             {
-                test: /\.css$/, include: /src/,
+                test: /\.css$/,
+                // no include since we want to handle bootstrap css in node_modules too
                 use:
                     // both style-loader and css-loader are needed to parse style tags in vue-loader
-                    ['style-loader', 'css-loader']
+                    // sass-loader needed for bootstrap, needs node-ass as well
+                    ['style-loader', 'css-loader', 'sass-loader']
             },
         ]
     },
