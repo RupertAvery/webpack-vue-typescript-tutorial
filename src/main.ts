@@ -1,1 +1,6 @@
-import App from './app.module';
+import Vue from 'vue';
+
+new Vue({
+    el: '#app',
+    render: h => h(require('./components/app/app.vue').default),
+});
