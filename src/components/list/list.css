@@ -2,3 +2,11 @@
     list-style: none;
     padding-left: 0;
 }
+
+.item-text {
+    width: 95%;
+}
+
+.button-contaimer {
+    width: 5px;
+}

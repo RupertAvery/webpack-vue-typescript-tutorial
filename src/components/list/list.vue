@@ -1,7 +1,12 @@
 <template>
-  <div>
+  <div class="container mt-3">
     <ul class="no-bullets">
-      <li v-for="item in items" :key="item">{{item}} <button v-on:click="remove(item)">x</button></li>
+      <li v-for="item in items" :key="item">
+        <div class="d-inline-block item-text">{{item}}</div>
+        <div class="d-inline-block button-contaimer">
+          <button class="btn" @click="remove(item)">x</button>
+        </div>
+      </li>
     </ul>
   </div>
 </template>
