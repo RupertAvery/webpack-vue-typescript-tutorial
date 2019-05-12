@@ -1,9 +1,9 @@
 export default {
-    data: function () {
-        return {
-            items: [
-                'eggs', 'fruit', 'milk', 'vegetables'
-            ]
+    props: [ 'items' ],
+    methods: {
+        remove: function(item) {
+            const index = this.items.indexOf(item);
+            this.items.splice(index, 1);
         }
     }
 }
