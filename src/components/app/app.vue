@@ -1,9 +1,9 @@
 <template>
   <div>
     <p>{{ message }}</p>
-    <input v-model="item">
-    <button v-on:click="addItem">Add</button>
-    <list v-bind:items="items"></list>
+    <input v-model="item" @keypress.enter="addItem">
+    <button @click="addItem">Add</button>
+    <list :items="items"></list>
     <div>
       <button-counter></button-counter>
     </div>
