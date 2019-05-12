@@ -17,7 +17,9 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.vue$/, include: /src/, loader: 'vue-loader' },
+            { test: /\.vue$/, include: /src/, loader : 'vue-loader' },
+            // both style-loader and css-loader are needed to parse style tags in vue-loader
+            { test: /\.css$/, include: /src/, use: [ 'style-loader', 'css-loader'] },
         ]
     },
     plugins: [
