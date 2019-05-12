@@ -10,4 +10,4 @@
   </div>
 </template>
 
-<script src="./app.js"></script>
+<script src="./app.ts"></script>

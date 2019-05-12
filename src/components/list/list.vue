@@ -7,5 +7,5 @@
 </template>
 
 <style src="./list.css"></style>
-<script src="./list.js"></script>
+<script src="./list.ts"></script>
 
