@@ -10,24 +10,4 @@
   </div>
 </template>
 
-<script>
-module.exports = {
-  components: {
-    ButtonCounter: require("../button-counter/button-counter").default,
-    List: require("../list/list.vue").default
-  },
-  data: function() {
-    return {
-      item: "",
-      items: [],
-      message: "Hello Vue"
-    };
-  },
-  methods: {
-    addItem: function() {
-      this.items.push(this.item);
-      this.item = "";
-    }
-  }
-};
-</script>
+<script src="./app.js"></script>

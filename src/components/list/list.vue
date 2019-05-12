@@ -6,12 +6,6 @@
   </div>
 </template>
 
-<style>
-.no-bullets {
-    list-style: none;
-    padding-left: 0;
-}
-</style>
-
+<style src="./list.css"></style>
 <script src="./list.js"></script>
 
