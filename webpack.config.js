@@ -51,6 +51,35 @@ module.exports = {
             },
         ]
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                default: false,
+                // Custom common chunk
+                bundle: {
+                    name: 'commons',
+                    chunks: 'all',
+                    minChunks: 3,
+                    reuseExistingChunk: false,
+                },
+                // Merge all the CSS into one file
+                styles: {
+                    name: 'styles',
+                    test: /\.s?css$/,
+                    chunks: 'all',
+                    minChunks: 1,
+                    reuseExistingChunk: true,
+                    enforce: true,
+                },
+                // Customer vendor
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    chunks: 'all',
+                    priority: -10
+                },
+            },
+        },
+    },
     plugins: [
         // Generates the index.html in the output directory
         new HtmlWebpackPlugin({
