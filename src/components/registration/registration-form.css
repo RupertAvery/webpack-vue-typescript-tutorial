@@ -1,0 +1,20 @@
+.registration-form {
+    max-width: 1100px;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+.error {
+    color: red;
+}
+
+input.error {
+    border-color: red;
+}
+
+ul.multi-errors{
+    list-style: none;
+    padding-left: 0;
+}

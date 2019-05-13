@@ -5,10 +5,12 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'jquery';
 
 import BootstrapVue from 'bootstrap-vue';
+import VeeValidate from "vee-validate";
 import router from './router';
 
 //tell Vue to use BootstrapVue components
 Vue.use(BootstrapVue);
+Vue.use(VeeValidate);
 
 new Vue({
     el: '#app',

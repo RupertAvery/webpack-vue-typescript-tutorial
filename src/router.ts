@@ -12,6 +12,10 @@ const routes = <RouteConfig[]>[
         path: '/register',
         component: require('./components/registration/registration-form.vue').default
     },
+    {
+        path: '/register/complete',
+        component: require('./components/registration/registration-success.vue').default
+    },
     /* Fallback */
     { path: '*', redirect: '/' },
 ];
