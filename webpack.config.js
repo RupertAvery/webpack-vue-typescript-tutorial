@@ -91,6 +91,7 @@ module.exports = {
     // for webpack-dev-server
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
+        historyApiFallback: true,   // needed by vue-router history mode
         compress: true,
         port: 9000
     }
